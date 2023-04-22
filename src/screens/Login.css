@@ -1,0 +1,100 @@
+.loginscreen{
+    position: relative;
+    height: 100%;
+    background: url("https://static.standard.co.uk/2022/11/16/10/netflix-s.jpg?width=1024&auto=webp&quality=50&crop=968%3A645%2Csmart") no-repeat center ;
+    background-size: cover;
+}
+
+.loginscreen__logo{
+    position: fixed;
+    left:0;
+    width: 150px;
+    opject-fit: contain;
+    padding-left: 20px;
+}
+
+.loginscreen__button{
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    padding: 10px 20px;
+    background-color: #fff;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #e50914;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    border-radius: 16px;
+    
+}
+
+.loginscreen__gradient{
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    background: rgba(0,0,0,0.4);
+    background-image: linear-gradient(
+        to top,
+        rgba(0,0,0,0.8)0,
+        rgba(0,0,0,0)60%,
+        rgba(0,0,0,0.8)100%
+        );
+}
+.loginscreen__body{
+   
+    position: absolute;
+    top:30%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    z-index: 1;
+    color: #fff;
+    padding: 20px;
+    left: 0;
+    right: 0;
+ 
+   
+
+
+
+}
+
+.loginscreen__body h1{
+    font-size: 3.125rem;
+    margin-bottom: 20px;
+}
+.loginscreen__body h2{
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+.loginscreen__body h3{
+    font-size: 1.3rem;
+    
+    font-weight: 400;
+}
+.loginscreen__input >form >input{
+    padding: 10px;
+    outline-width: 0;
+    height: 30px;
+    width: 30%;
+    border: none;
+    max-width: 600px;
+}
+
+.loginscreen__getstarted{
+    margin-top: 30px;
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    padding: 16px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+   
+}
+
+.loginscreen__input{
+    margin: 20px;
+}
