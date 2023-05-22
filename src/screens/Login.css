@@ -3,12 +3,16 @@
     height: 100%;
     background: url("https://static.standard.co.uk/2022/11/16/10/netflix-s.jpg?width=1024&auto=webp&quality=50&crop=968%3A645%2Csmart") no-repeat center ;
     background-size: cover;
+   
+    
 }
 
 .loginscreen__logo{
     position: fixed;
     left:0;
-    width: 150px;
+    top: 0px;
+    left: 0;
+    width: 70px;
     opject-fit: contain;
     padding-left: 20px;
 }
@@ -19,13 +23,13 @@
     top: 20px;
     padding: 10px 20px;
     background-color: #fff;
-    font-size: 1rem;
+    font-size: 0.7rem;
     color: #fff;
     background-color: #e50914;
     font-weight: 600;
     cursor: pointer;
     border: none;
-    border-radius: 16px;
+    border-radius: 12px;
     
 }
 
@@ -61,26 +65,33 @@
 }
 
 .loginscreen__body h1{
-    font-size: 3.125rem;
-    margin-bottom: 20px;
+    font-size: 1rem;
+    font-weight: 700;
+   
+   margin-bottom: 20px;
+    left: 0;
+    right: 0;
+    top: 15rem;
 }
 .loginscreen__body h2{
-    font-size: 2rem;
-    margin-bottom: 30px;
-    font-weight: 400;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    font-weight: 600;
 }
 .loginscreen__body h3{
-    font-size: 1.3rem;
+    font-size: 1rem;
     
     font-weight: 400;
 }
 .loginscreen__input >form >input{
     padding: 10px;
     outline-width: 0;
-    height: 30px;
-    width: 30%;
+    height: 20px;
+    width: 49%;
     border: none;
-    max-width: 600px;
+    max-width: 700px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
 }
 
 .loginscreen__getstarted{
@@ -89,12 +100,17 @@
     color: #fff;
     border: none;
     padding: 16px 20px;
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 0.7rem;
+    font-weight: 500;
     cursor: pointer;
-   
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+
+    
 }
 
 .loginscreen__input{
     margin: 20px;
+  
+
 }

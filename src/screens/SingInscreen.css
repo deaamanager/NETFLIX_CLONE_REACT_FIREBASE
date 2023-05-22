@@ -1,9 +1,12 @@
 .singin__screen{
     max-width: 300px;
-    padding: 70px;
+    padding: 40px;
     margin-left:  auto;
     margin-right: auto;
-    background: rgba(0,0,0,0.80);
+    background: rgba(0,0,0,0.70);
+    border-radius: 20px;
+
+
 }
 
 .singin__screen > form {
@@ -14,14 +17,27 @@
 .singin__screen > form > input {
     margin-bottom: 14px;
     outline-width: 0;
-    height: 40px;
-    border-radius: 5px;
+    height: 30px;
+    
     border: none;
     padding: 5px 15px;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    border-radius: 20px;
+    }
+    .singin__screen > form > h1{
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+        margin-top: 0;
+
+      
+
     }
 
     .singin__screen > form > button {
-        padding: 16px 20px;
+        padding: 13px 20px;
         background: #e50914;
         border-radius: 5px;
         color: #fff;
@@ -29,7 +45,7 @@
         font-size: 1rem;
         border: none;
         font-weight: 600;
-        margin-top: 20px;
+        margin-top: 45px;
         margin-bottom: 20px;
         cursor: pointer;
 
@@ -44,3 +60,92 @@
         text-decoration: underline;
 
     }
+    .singin__error{
+        position: absolute;
+        top: 0;      
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        allign-items:center;
+        background-color: rgba(0,0,0,0.80);
+        height: 100%;
+    }
+   .singin__screen > form > p{
+       color: #fff;
+        font-size: 0.7rem;
+        font-weight: 400;
+        margin-top: 5px;
+        cursor: pointer;
+       
+        position: absolute;
+        bottom: 10rem;
+        padding: 2px 15px
+   }
+   .input__forget{
+    margin-bottom: 14px;
+    outline-width: 0;
+    height: 30px;
+    border-top-left-radius:20px;
+    border-bottom-left-radius:20px;
+    border: none;
+    padding: 5px 15px;
+    background: rgba(0,0,0,0.5);
+    color: black;
+    background:#fff;
+   
+   }
+   .button__forget{
+    padding: 14px 10px;
+    background: #e50914;
+    display:flex;
+    border-top-right-radius:5px;
+    border-bottom-right-radius:5px;
+    color: #fff;
+    height: 40px;
+    font-size: 0.7rem;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    
+   }
+   .div__forget{
+    display:flex;
+    flex-direction:row;
+    margin-top:8px;
+    margin-bottom:0px;
+    width:100%;
+    gap:1px;
+   }
+   .google__logo{
+    height: 40px;
+    padding-left:13px;
+    object:cover;
+   }
+   .google__button{
+
+    width:80%;
+    padding: 13px 20px;  
+    border-radius: 5px;
+    color: #111;
+    height: 40px;
+    font-size: 0.9rem;
+    border: none;
+    font-weight: 600;  
+    cursor: pointer;
+   }
+   .div__googlebtn {
+    display:flex;
+    allign-items:center;
+   }
+   .singup__btn{
+    padding: 13px 20px;
+        background: #e50914;
+        border-radius: 5px;
+        color: #fff;
+        height: 40px;
+        font-size: 1rem;
+        border: none;
+        font-weight: 600;
+        cursor: pointer;
+   }

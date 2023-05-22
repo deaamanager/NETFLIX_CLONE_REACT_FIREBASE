@@ -10,7 +10,7 @@ import './App.css';
 import { auth } from './firebase';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout,login, selectUser } from './features/userSlice';
-
+import Footer from './Footer';
 
 
 function App() {
@@ -38,17 +38,21 @@ useEffect(() => {
     <div className="app">
       <BrowserRouter>
       {!user ? (
-      <Login />
+      <Login /> 
+     
       ) : (
 
         <Routes>
           <Route exact path="/" element={<HomeScreen />} />
           <Route path="/profile" element={<ProfileScreen />} />
+          <Route path="/regstir" element={<ProfileScreen />} />
         </Routes>
 
         
           )}
       </BrowserRouter>
+
+      <Footer />
     </div>
   );
 }

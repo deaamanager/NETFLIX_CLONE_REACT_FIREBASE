@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { fetchCount } from './counterAPI';
+import { auth } from '../firebase';
 
 /*
 const initialState = {
@@ -42,7 +43,7 @@ export const userSlice = createSlice({
 });
 
 export const { login, logout } = userSlice.actions;
-
+//export const PasswordRest = email => auth.sendPasswordResetEmail(email);
 export const selectUser = (state) => state.user.user;
 
 // We can also write thunks by hand, which may contain both sync and async logic.

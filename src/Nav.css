@@ -29,9 +29,9 @@ justify-content: space-between;
 
 .nav__logo{
     position: fixed;
-    top: -10px;
+    top: 0px;
     left: 0;
-    width: 90px;
+    width: 70px;
     cursor: pointer;
     padding-left: 20px;
     object-fit: contain;
