@@ -1,25 +1,31 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { google, auth } from "../firebase";
-import { signInWithRedirect } from "@firebase/auth";
+import { google, auth  } from "../firebase";
+import { signInWithRedirect  } from "@firebase/auth";
 import { logout, login } from '../features/userSlice';
 import { Typewriter, Cursor } from 'react-simple-typewriter';
+import { useDispatch } from 'react-redux';
 import './SingInscreen.css'
 function SingIn() {
   const [errorMessage, setErrorMessage] = useState("");
   const [value, setValue] = useState('');
   const emailref = useRef(null);
   const passwordref = useRef(null);
+  const dispatch = useDispatch();
 
   const handelGoogle = () => {
     signInWithRedirect(auth, google).then((authUser) => {
       if (authUser) {
-        login()
+        dispatch(login({
+          uid: authUser.uid,
+          email: authUser.email,
+        }))
       } else {
-        logout()
+        dispatch(logout())
       }
-    })
+    }).catch((error) => {
+      setErrorMessage(error.message);
+    });
   }
-
   useEffect(() => {
     setValue(localStorage.getItem("email"))
   })
@@ -38,7 +44,7 @@ function SingIn() {
   };
 
   return (
-
+    <div className='singin__login'> 
 
     <form>
       <h1><span><Typewriter delaySpeed={900} loop={true} words={["Sing Up . . ."]} /></span>
@@ -58,27 +64,26 @@ function SingIn() {
         <p className='error__message'>reg</p>
         <button className='error__button'
           onClick={() => setErrorMessage("")}
-        >Close</button>
+          >Close</button>
       </div>}
-
       <button
         type="submit"
         onClick={register}
-      >Sign up</button>
-         <div className='div__googlebtn'>
+        >Sign up</button>     
+    </form>
+    <div className='div__googlebtn'>
          <button
        onClick={handelGoogle}
        className='google__button'
      >
-       LogIn with
+       Sing up with Google
      </button>
       <img
        className='google__logo'
        src='https://www.pngplay.com/wp-content/uploads/13/Google-Logo-PNG-HD-Quality.png'
        alt='google-login-logo' />
      </div>
-    </form>
- 
+ </div>
   )
 }
 

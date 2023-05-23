@@ -2,18 +2,16 @@ import React, { useRef, useState } from 'react'
 import './SingInscreen.css'
 import { auth } from '../firebase';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
-import { useNavigate } from 'react-router-dom';
+
 import SingIn from './SingIn';
 import ForgetPassword from './ForgetPassword';
 function SingInscreen() {
   const [login, setLogin] = useState(false);
   const [forget, setForget] = useState(false);
-  const history = useNavigate();
   const emailref = useRef(null);
   const passwordref = useRef(null);
   const [errorMessage, setErrorMessage] = useState("");
-
-  const [write, conut] = useTypewriter({
+  const [write] = useTypewriter({
     words: ["Sing In . . ."],
     loop: true,
     delaySpeed: 1000,
@@ -34,7 +32,6 @@ function SingInscreen() {
     {login ? (
       <SingIn />
     ) : (
-
       <form>
         <h1><span>{write}</span>
           <span><Cursor />  </span>
@@ -58,11 +55,8 @@ function SingInscreen() {
         </h4>
       </form>
     )}
-
-
-
   </div>;
 
 }
 
-export default SingInscreen
+export default SingInscreen;

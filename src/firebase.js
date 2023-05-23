@@ -4,6 +4,8 @@ import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 
 
+
+
 const firebaseConfig = {
     apiKey: "AIzaSyBqByDI-MFyqab_2EhSsSzg7OJ1YY3j4Z0",
     authDomain: "netflex-clone-a2c65.firebaseapp.com",
@@ -15,8 +17,7 @@ const firebaseConfig = {
   };
   
 
-
- const firebaseApp = firebase.initializeApp(firebaseConfig);
+const firebaseApp = firebase.initializeApp(firebaseConfig);
 const db = firebaseApp.firestore();
 const auth = firebase.auth();
 const google = new firebase.auth.GoogleAuthProvider();
